@@ -1,0 +1,64 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 26
+    defaultConfig {
+        applicationId "com.gongyou.worker"
+        minSdkVersion 15
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0.1"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+    }
+    //签名配置需要放在signingConfig signingConfigs.myConfig的前面。
+    signingConfigs {
+        myConfig {
+            try {
+                storeFile file('../key.jks')
+                storePassword "dadaworker"
+                keyAlias "dadaworker"
+                keyPassword "dadaworker"
+            }catch (ex){
+                throw new InvalidUserDataException(ex.toString())
+            }
+
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            signingConfig signingConfigs.myConfig
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            minifyEnabled false
+            // 移除无用的resource文件
+            shrinkResources false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        applicationVariants.all { variant ->
+
+            variant.outputs.all {
+                outputFileName = "Worker${defaultConfig.versionName}.apk"
+            }
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.android.support:appcompat-v7:26.1.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.1'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
+
+    // 远程依赖集成方式（推荐）
+    compile "com.tencent.bugly:crashreport_upgrade:latest.release"
+    // 多dex配置
+    compile "com.android.support:multidex:1.0.1"
+}
+
+// 依赖插件脚本
+apply from: 'tinker-support.gradle'
