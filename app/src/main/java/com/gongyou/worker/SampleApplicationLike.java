@@ -21,6 +21,8 @@ import com.umeng.commonsdk.UMConfigure;
 
 import java.util.Locale;
 
+import cn.jpush.android.api.JPushInterface;
+
 /**
  * Created by Administrator on 2017-07-17.
  */
@@ -53,6 +55,9 @@ public class SampleApplicationLike extends DefaultApplicationLike {
     public void onCreate() {
         super.onCreate();
         context = getApplication();
+        //极光推送初始化
+        JPushInterface.setDebugMode(true);
+        JPushInterface.init(context);
         //友盟初始化。
         UMConfigure.init(context,UMConfigure.DEVICE_TYPE_PHONE,null);
         /**
