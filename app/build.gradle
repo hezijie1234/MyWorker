@@ -6,8 +6,8 @@ android {
         applicationId "com.gongyou.worker"
         minSdkVersion 15
         targetSdkVersion 26
-        versionCode 6
-        versionName "1.0.6"
+        versionCode 8
+        versionName "1.0.8"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         multiDexEnabled true
         manifestPlaceholders = [
@@ -100,7 +100,11 @@ dependencies {
     compile 'cn.jiguang.sdk:jpush:3.1.1'
     // 此处以JCore 1.1.9 版本为例。
     compile 'cn.jiguang.sdk:jcore:1.1.9'
-
+    implementation files('libs/ocr-sdk.jar')
+    implementation project(':ocr_ui')
+    //    鲁班图片压缩处理
+    compile 'top.zibin:Luban:1.1.2'
+    implementation files('libs/alipaySdk-20180316.jar')
 }
 
 // 依赖插件脚本

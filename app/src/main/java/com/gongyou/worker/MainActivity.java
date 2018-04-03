@@ -22,6 +22,7 @@ import com.amap.api.maps.model.BitmapDescriptorFactory;
 import com.amap.api.maps.model.LatLng;
 import com.amap.api.maps.model.MyLocationStyle;
 import com.gongyou.worker.activity.MVPBaseActivity;
+import com.gongyou.worker.activity.first.CertificationActivity;
 import com.gongyou.worker.activity.first.LoginActivity;
 import com.gongyou.worker.activity.first.PoiKeywordSearchActivity;
 import com.gongyou.worker.mvp.bean.second.FindInfo;
@@ -63,6 +64,7 @@ public class MainActivity extends MVPBaseActivity<MainActivityView,MainActivityP
         mMapView.onCreate(savedInstanceState);
         Toast.makeText(this, "补丁三", Toast.LENGTH_SHORT).show();
 
+
     }
 
     @Override
@@ -93,7 +95,7 @@ public class MainActivity extends MVPBaseActivity<MainActivityView,MainActivityP
         mLocationBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                startActivity(new Intent(MainActivity.this, CertificationActivity.class));
+                startActivity(new Intent(MainActivity.this, CertificationActivity.class));
             }
         });
     }

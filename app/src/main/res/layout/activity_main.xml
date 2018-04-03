@@ -23,7 +23,7 @@
             android:layout_marginLeft="@dimen/margin_xlarge"
             android:padding="@dimen/padding_small"
             android:textColor="@color/umeng_white"
-            android:text="补丁三"/>
+            android:text="补丁一"/>
         <TextView
             android:id="@+id/main_text"
             android:layout_width="wrap_content"

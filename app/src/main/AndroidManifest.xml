@@ -123,6 +123,8 @@
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity android:name=".activity.first.CertificationActivity" />
+        <activity android:name=".activity.first.IDCardActivity" />
         <!-- 极光推送的服务-->
         <receiver
             android:name=".jiguang.MyReceiver"
