@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:layout_width="match_parent"
+             android:visibility="gone"
+             android:layout_height="match_parent"
+             android:background="#eee">
+
+    <LinearLayout
+        android:layout_gravity="center_vertical"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:background="@android:color/transparent"
+            android:id="@+id/load_gif"
+            android:src="@drawable/loading"
+            android:layout_width="80dp"
+            android:layout_height="80dp"/>
+
+        <!--<ProgressBar-->
+            <!--android:s_id="@+s_id/progressBar"-->
+            <!--style="?android:attr/progressBarStyleSmall"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_gravity="center_horizontal"/>-->
+        <!--<TextView-->
+            <!--android:layout_marginLeft="10dp"-->
+            <!--android:textColor="#666"-->
+            <!--android:textSize="14sp"-->
+            <!--android:text="正在加载数据 . . ."-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"/>-->
+    </LinearLayout>
+</FrameLayout>

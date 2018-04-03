@@ -1,13 +1,13 @@
 apply plugin: 'com.android.application'
-
+apply plugin: 'com.jakewharton.butterknife'
 android {
     compileSdkVersion 26
     defaultConfig {
         applicationId "com.gongyou.worker"
         minSdkVersion 15
         targetSdkVersion 26
-        versionCode 3
-        versionName "1.0.3"
+        versionCode 4
+        versionName "1.0.4"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         multiDexEnabled true
     }
@@ -23,6 +23,11 @@ android {
                 throw new InvalidUserDataException(ex.toString())
             }
 
+        }
+    }
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
         }
     }
     buildTypes {
@@ -64,8 +69,16 @@ dependencies {
     compile 'io.reactivex:rxandroid:1.2.1'
     //butterknife
     compile 'com.jakewharton:butterknife:8.4.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.4.0'
     //PageIndicator
     implementation project(':indicatorlibrary')
+    //高德地图
+    implementation files('libs/AMap_Location_V3.8.0_20180201.jar')
+    implementation files('libs/AMap_Search_V5.7.0_20171229.jar')
+    implementation files('libs/Android_Map3D_SDK_V6.0.1_20180309.jar')
+
+    compile 'com.github.bumptech.glide:glide:3.8.0'
+
 }
 
 // 依赖插件脚本

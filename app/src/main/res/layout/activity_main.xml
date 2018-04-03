@@ -8,18 +8,78 @@
     android:layout_height="match_parent"
     tools:context="com.gongyou.worker.MainActivity">
 
+    <RelativeLayout
+        android:id="@+id/status_bar"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:background="@color/colorPrimaryDark"
+        android:layout_height="50dp">
+        <TextView
+            android:id="@+id/tv_location"
+            android:layout_width="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_size_medium"
+            android:layout_marginLeft="@dimen/margin_xlarge"
+            android:padding="@dimen/padding_small"
+            android:textColor="@color/umeng_white"
+            android:text="补丁二"/>
+        <TextView
+            android:id="@+id/main_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_size_large"
+            android:text="@string/bugly_test"
+            android:layout_centerInParent="true"
+            android:textColor="@color/umeng_white"/>
+        <TextView
+            android:id="@+id/location"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/padding_small"
+            android:textSize="@dimen/text_size_medium"
+            android:layout_alignParentRight="true"
+            android:textColor="@color/white"
+            android:layout_marginRight="@dimen/margin_xxlarge"
+            android:text="补丁二"/>
+    </RelativeLayout>
+    <com.amap.api.maps.TextureMapView
+        android:id="@+id/map_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
     <TextView
+
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/bugly_test"
+        android:text="Hello World!"
+        android:padding="20dp"
+        android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+    <Button
+        android:id="@+id/login"
+        android:layout_width="wrap_content"
+        android:text="登录"
+        android:padding="20dp"
+        android:layout_height="wrap_content" />
+    <Button
+
+        android:layout_width="wrap_content"
+        android:text="开启定位"
+        android:padding="20dp"
+        android:layout_height="wrap_content" />
     <TextView
-        android:id="@+id/download_txt"
+        android:id="@+id/location_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="下载内容"/>
+        android:text="Hello World!"
+        android:padding="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </LinearLayout>
