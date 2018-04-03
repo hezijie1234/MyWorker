@@ -1,6 +1,144 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorPrimaryDark">#185fd0</color>
     <color name="colorAccent">#FF4081</color>
+    <color name="titieBack">#ffda44</color>
+    <color name="white">#ffffff</color>
+    <color name="whiteText">#f0f4ff</color>
+    <color name="black">#000000</color>
+    <color name="lightblack">#aa000000</color>
+
+    <color name="text">#111</color>
+    <color name="textlight">#333</color>
+
+
+    <color name="brightText">#ff7e3f</color>
+
+
+    <color name="gray">#eee</color>
+    <color name="gray_text">#ECEDF3</color>
+
+
+    <color name="grayText">#888</color>
+    <color name="grayText_press">#eea</color>
+    <color name="lightblue">#85a8ee</color>
+    <color name="lightblue1">#6d98ec</color>
+
+    <color name="redText">#ff5959</color>
+    <color name="brownText">#feaf68</color>
+    <color name="refunText">#FDAB5D</color>
+    <color name="brown_button_color">#FD8E22</color>
+
+
+    <color name="lightblue2">#CDDBF2</color>
+    <!--Button颜色-->
+    <color name="button_color">#6F98D9</color>
+    <color name="button1_color">#86A7DC</color>
+    <!--Button颜色-->
+    <color name="button_color_tiny">#996F98D9</color>
+    <color name="button_color_press">#4F78b9</color>
+    <!--主题背景色-->
+    <color name="appbackground_color">#ECEDF3</color>
+    <color name="gray_large">#EEEEEE</color>
+    <color name="search_bk_color">#F1F1F1</color>
+
+    <color name="line_color">#D4D4D4</color>
+
+
+    <color name="has_choose_button">#CBCBCB</color>
+    <color name="has_lower_button">#FAFAFA</color>
+    <color name="has_lower2_button">#FFFFFF</color>
+
+
+    <color name="round_button_color">#7098D9</color>
+
+    <!--标题栏颜色-->
+    <color name="actionbar_color">#1550D3</color>
+
+    <!--项目工种按钮颜色-->
+    <color name="project_spinner_color">#4074D6</color>
+    <!--结算方式背景色-->
+    <color name="paytype_background_color">#B8BDFF</color>
+    <color name="audit_background_color">#CBCBCB</color>
+    <color name="ispay_color">#FD9639</color>
+    <color name="brown_deep">#FD7C00</color>
+    <drawable name="ispay">#FD9639</drawable>
+    <color name="brown_notice">#FD8E22</color>
+
+
+    <color name="blue_small">#E8EFFF</color>
+    <color name="blue_normal">#A6C5F6</color>
+    <!--<color name="blue_deep_color">#</color>-->
+
+    <color name="special_line_color">#C7D7EF</color>
+    <color name="dashed_line_color">#D9DAE2</color>
+
+
+    <!--字体颜色-->
+
+    <color name="text_color_num">#FF8B8B</color>
+    <color name="text_color_blue">#4074D6</color>
+    <color name="text_color_hint">#C8C8C8</color>
+    <color name="text_color_red">#FF5656</color>
+    <color name="text_color_gray_normal">#999999</color>
+
+
+    <color name="text_color_gray_xnormal">#808080</color>
+    <color name="text_color_gray_xxnormal">#666666</color>
+    <color name="text_color_gray_xxxnormal">#4E4E4E</color>
+    <color name="text_color_alipay">#858585</color>
+    <color name="text_color_determine">#175dcf</color>           <!--提示框，确定按钮颜色-->
+
+
+    <color name="text_color_new_tiny">#878787</color>
+    <color name="text_color_new_normal">#050505</color>
+    <color name="text_color_new_blue_normal">#175dcf</color>
+
+    <color name="text_worktype_color">#86A7DC</color>
+
+    <color name="blue_background">#DCE9FF</color>
+
+
+    <color name="text_color_new_blue">#16B7E5</color>
+
+    <color name="text_color_Large_top_up">#6F98D9</color>
+    <color name="text_color_refuse_dialog">#7BA0DC</color>
+    <color name="text_color_vertical">#C8D8FF</color>
+
+
+    <color name="worktype_shape_background_color">#DCE9FF</color>
+    <!--友盟的配置-->
+    <color name="umeng_white">#ffffff</color>
+    <color name="umeng_blue">#0086DC</color>
+    <color name="umeng_black">#000000</color>
+    <color name="umeng_background">#D4E0E5</color>
+    <color name="umeng_text_color">#575A5C</color>
+    <color name="umeng_divide">#C3C6C9</color>
+    <color name="translucent_white">#3fff</color>
+
+
+    <color name="color_round_1">#46B6E8</color>
+    <color name="color_round_2">#F8B551</color>
+    <color name="color_round_3">#B8BDFF</color>
+    <color name="color_round_4">#46B6E8</color>
+
+    <color name="text_new_blue_color">#86A7DC</color>
+
+
+    <color name="color_text_0">#4E4E4E</color>
+    <color name="color_text_1">#858585</color>
+    <color name="color_text_2">#F45A5A</color>
+
+    <color name="color_text_3">#85B585</color>
+    <color name="color_text_4">#FD8E22</color>
+    <color name="color_text_5">#6F98D9</color>
+
+    <color name="color_text_6">#ec800d</color>
+    <color name="color_hint_text">#cccdce</color>
+    <color name="color_text_warm">#A4A4A7</color>
+
+    <color name="gray_background_color">#DEDEDC</color>
+
+    <color name="gary">#898989</color>
 </resources>
