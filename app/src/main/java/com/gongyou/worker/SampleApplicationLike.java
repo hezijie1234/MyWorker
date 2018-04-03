@@ -16,6 +16,8 @@ import com.tencent.bugly.Bugly;
 import com.tencent.bugly.beta.Beta;
 import com.tencent.bugly.beta.interfaces.BetaPatchListener;
 import com.tencent.tinker.loader.app.DefaultApplicationLike;
+import com.umeng.analytics.MobclickAgent;
+import com.umeng.commonsdk.UMConfigure;
 
 import java.util.Locale;
 
@@ -51,17 +53,23 @@ public class SampleApplicationLike extends DefaultApplicationLike {
     public void onCreate() {
         super.onCreate();
         context = getApplication();
+        //友盟初始化。
+        UMConfigure.init(context,UMConfigure.DEVICE_TYPE_PHONE,null);
+        /**
+         * 设置组件化的Log开关
+         * 参数: boolean 默认为false，如需查看LOG设置为true
+         */
+        UMConfigure.setLogEnabled(true);
+        /**
+         * 设置日志加密
+         * 参数：boolean 默认为false（不加密）
+         */
+        UMConfigure.setEncryptEnabled(true);
+        //场景类型设置为普通统计场景类型。
+        MobclickAgent.setScenarioType(context, MobclickAgent.EScenarioType.E_DUM_NORMAL);
         TelephonyManager telephonyManager = (TelephonyManager) context.getSystemService(Context.TELEPHONY_SERVICE);
         if (ActivityCompat.checkSelfPermission(context, android.Manifest.permission.READ_PHONE_STATE) == PackageManager.PERMISSION_GRANTED) {
-            // TODO: Consider calling
-            //    ActivityCompat#requestPermissions
-            // here to request the missing permissions, and then overriding
-            //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
-            //                                          int[] grantResults)
-            // to handle the case where the user grants the permission. See the documentation
-            // for ActivityCompat#requestPermissions for more details.
             clientid = telephonyManager.getDeviceId();
-
         }
         handler = new Handler();
         toast = Toast.makeText(context, "", Toast.LENGTH_SHORT);
@@ -69,9 +77,6 @@ public class SampleApplicationLike extends DefaultApplicationLike {
         // 这里实现SDK初始化，appId替换成你的在Bugly平台申请的appId
         // 调试时，将第三个参数改为true
         Bugly.init(getApplication(), "7648eb7efe", true);
-        //友盟统计场景设置
-//        MobclickAgent.setScenarioType(getApplication(), MobclickAgent.EScenarioType. E_UM_NORMAL);
-
     }
     public static void setToken(String token) {
         SampleApplicationLike.token = token;

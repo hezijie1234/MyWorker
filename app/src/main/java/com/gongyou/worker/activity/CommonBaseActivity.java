@@ -16,6 +16,7 @@ import android.widget.ProgressBar;
 
 import com.gongyou.worker.SampleApplicationLike;
 import com.gongyou.worker.utils.DensityUtils;
+import com.umeng.analytics.MobclickAgent;
 
 
 /**
@@ -164,10 +165,10 @@ public class CommonBaseActivity extends CheckPermissionsActivity {
 
     protected void onResume() {
         super.onResume();
-//        MobclickAgent.onResume(this);
+        MobclickAgent.onResume(this);
     }
     protected void onPause() {
         super.onPause();
-//        MobclickAgent.onPause(this);
+        MobclickAgent.onPause(this);
     }
 }

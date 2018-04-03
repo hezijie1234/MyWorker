@@ -22,6 +22,8 @@ import com.amap.api.maps.model.BitmapDescriptorFactory;
 import com.amap.api.maps.model.LatLng;
 import com.amap.api.maps.model.MyLocationStyle;
 import com.gongyou.worker.activity.MVPBaseActivity;
+import com.gongyou.worker.activity.first.LoginActivity;
+import com.gongyou.worker.activity.first.PoiKeywordSearchActivity;
 import com.gongyou.worker.mvp.bean.second.FindInfo;
 import com.gongyou.worker.mvp.bean.second.MsgViewInfo;
 import com.gongyou.worker.mvp.presenter.second.MainActivityPresenter;
@@ -78,13 +80,13 @@ public class MainActivity extends MVPBaseActivity<MainActivityView,MainActivityP
             @Override
             public void onClick(View v) {
 //                startActivity(new Intent(MainActivity.this, ListFilterActivity.class));
-//                startActivity(new Intent(MainActivity.this, PoiKeywordSearchActivity.class));
+                startActivity(new Intent(MainActivity.this, PoiKeywordSearchActivity.class));
             }
         });
         mLoginBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                startActivity(new Intent(MainActivity.this, LoginActivity.class));
+                startActivity(new Intent(MainActivity.this, LoginActivity.class));
             }
         });
 
